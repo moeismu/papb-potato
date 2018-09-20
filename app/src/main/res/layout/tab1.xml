@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   &lt;!&ndash; <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp">
+
+
+
+    </android.support.v7.widget.LinearLayoutCompat>&ndash;&gt;
+
+
+</android.support.constraint.ConstraintLayout>-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round">
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/person_fore"/>
+
+        <EditText
+            android:id="@+id/editTextPath"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:background="@drawable/round"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:hint="Browse"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <Button
+            android:id="@+id/buttonChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/editTextPath"
+            android:text="Change" />
+
+        <Button
+            android:id="@+id/buttonBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/buttonChange"
+            android:layout_toLeftOf="@id/buttonChange"
+            android:layout_marginRight="5dp"
+            android:text="Browse" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:background="@drawable/box">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/textViewBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIODATA"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_below="@id/textViewBio"
+            android:padding="10dp"
+            android:id="@+id/textViewUname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username :"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:hint="username"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@id/textViewUname"
+            android:layout_toRightOf="@id/textViewUname"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_below="@id/textViewUname"
+            android:padding="10dp"
+            android:id="@+id/textViewPilihJabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jabatan :"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"/>
+
+        <Spinner
+            android:id="@+id/simpleSpinner"
+            android:layout_width="245dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/editTextUsername"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/textViewPilihJabatan"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_below="@id/textViewPilihJabatan"
+            android:padding="10dp"
+            android:id="@+id/textViewGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender :"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"/>
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/simpleSpinner"
+            android:layout_toRightOf="@id/textViewGender"
+            android:padding="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_male"/>
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_female"
+                android:layout_marginLeft="15dp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_below="@id/textViewGender"
+            android:padding="10dp"
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email :"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"/>
+        <EditText
+            android:layout_below="@id/textViewEmail"
+            android:id="@+id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:hint="email"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@id/textViewEmail"
+            android:layout_toRightOf="@id/textViewEmail"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="32dp"/>
+        <Button
+            android:id="@+id/buttonsave"
+            android:layout_below="@id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="SAVE" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/textViewBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIODATA"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:layout_below="@id/textViewBio"
+            android:background="@drawable/round"
+            android:padding="10dp"
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textSize="15sp"/>
+        &lt;!&ndash;<Spinner
+            android:layout_below="@id/textViewUsername"
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>&ndash;&gt;
+        <Spinner
+            android:layout_below="@id/editTextUsername"
+            android:id="@+id/simpleSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:layout_below="@id/simpleSpinner"
+            android:id="@+id/textViewGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENDER"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"/>
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/textViewGender">
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_male"/>
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_female"
+                android:layout_marginLeft="15dp"/>
+        </RadioGroup>
+        <EditText
+            android:layout_below="@id/radioSex"
+            android:background="@drawable/round"
+            android:padding="10dp"
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address (example@someone.com)"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:inputType="textEmailAddress"/>
+        <Button
+            android:id="@+id/buttonsave"
+            android:layout_below="@id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="SAVE" />
+    </RelativeLayout>-->
+
+
+
+
+</LinearLayout>

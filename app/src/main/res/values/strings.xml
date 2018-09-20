@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tugas1 - IdPotato</string>
+    <string name="app">IdPotato</string>
+    <string name="tab_text_1">Identity</string>
+    <string name="tab_text_2">Mr Potato</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="test_id1">WOW TAB ID</string>
+    <string name="test_id2">WOW TAB POTATO</string>
+    <string-array name="jabatan">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+</resources>
